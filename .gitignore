@@ -1,0 +1,54 @@
+# Кэш Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Локальные виртуальные окружения
+venv/
+env/
+
+# Логи и отладочная информация
+*.log
+*.out
+*.err
+
+# Кэш pip
+pip-selfcheck.json
+
+# Кэш и временные файлы IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Кэш и файлы конфигураций операционной системы
+.DS_Store
+Thumbs.db
+
+# Файлы, связанные с тестированием
+*.coverage
+.cache/
+nosetests.xml
+coverage.xml
+
+# Кэш и сборка
+build/
+dist/
+*.egg-info/
+*.eggs/
+
+# Файлы и каталоги для CI
+.tox/
+.pytest_cache/
+
+# Файлы, связанные с виртуальными окружениями
+*.env
+*.envrc
+.env.local
+.env.*.local
+
+# Локальные файлы базы данных SQLite (если не используются)
+*.db
+
+# Логи Docker
+docker-compose.override.yml
