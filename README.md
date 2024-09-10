@@ -15,7 +15,8 @@ Fitness project based on Django
 1. Clone the repository:
 
     ```sh
-    git clone 
+    git clone https://github.com/anton-macOS/DjangoProject.git
+
     cd DjangoProject
     ```
 
