@@ -1,4 +1,8 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from .models import Supplements
+
 
 def supplements(request):
-    return HttpResponse('<h1>This is supplements page</h1>')
+    user_supplements = Supplements.objects.filter(user_id=1).first()
+    return render(request, 'users/user_supplements.html',
+                  {'user_supplements': user_supplements})

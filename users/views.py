@@ -1,8 +1,16 @@
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from .models import User, UserStats
 
 
-def welcome_user(request):
-    return HttpResponse('<h1>This is users page!</h1>')
+def user_main(request):
+    user = User.objects.filter(user_id=1).first()
+    return render(request, 'users/users_main.html', {'user': user})
+
 
 def user_stats(request):
-    return  HttpResponse('<h1>This is user stats page</h1>')
+    user_stats = UserStats.objects.filter(user_id=1).first()
+    return render(request, 'users/user_stats.html', {'user_stats': user_stats})
+
+
+
+

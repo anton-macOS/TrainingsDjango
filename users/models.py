@@ -21,6 +21,6 @@ class UserStats(models.Model):
     hip_circ = models.FloatField()
 
     def __str__(self):
-        return f'{self.user_id} | height: {self.height} | weight: {self.weight}'
+        return f'{self.user_id}{self.user_id} | height: {self.height} | weight: {self.weight}'
 
 
