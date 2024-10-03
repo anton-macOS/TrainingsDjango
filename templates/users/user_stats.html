@@ -1,0 +1,18 @@
+{% extends 'base/base_student.html' %}
+
+{% block content %}
+    <main class="flex-fill d-flex flex-column justify-content-center">
+        <div class="row d-flex justify-content-center">
+            <div class="col-6 col-md-4">
+                <p class="text-center text-light fs-1 fw-bold text-decoration-underline">Статістика:</p>
+                <p class="text-center text-light">Імʼя: {{user_stats.user_id.first_name}}</p>
+                <p class="text-center text-light">Фамілія: {{user_stats.user_id.last_name}}</p>
+                <p class="text-center text-light">Зріст: {{user_stats.height}} см.</p>
+                <p class="text-center text-light">Вага: {{user_stats.weight}} кг.</p>
+                <p class="text-center text-light">Груди: {{user_stats.chest_circ}} см.</p>
+                <p class="text-center text-light">Талія: {{user_stats.waist_circ}} см.</p>
+                <p class="text-center text-light">Сідниці: {{user_stats.hip_circ}} см.</p>
+            </div>
+        </div>
+    </main>
+{% endblock %}

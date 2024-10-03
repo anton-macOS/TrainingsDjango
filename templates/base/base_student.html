@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+<style>
+    html, body {
+        height: 100%;
+    }
+    main {
+        background-color: rgb(108, 117, 125);
+    }
+    .d-flex {
+        max-height: 100vh;
+        display: flex;
+    }
+</style>
+    <title>Document</title>
+</head>
+<body class="d-flex flex-column">
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">COBRA Training</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div >
+                <ul class="navbar-nav nav-underline">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'users:user_main' %}">Головна</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'users:user_stats' %}">МоЇ досягнення</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'exercices:trainings' %}">МоЇ тренування</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'supplements:supplements' %}">Моє харчування</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="nav nav-underline">
+                    <li class="nav-item"><a class="nav-link link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"href="#">Вийти!</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% block content%}
+{% endblock %}
+    <footer class="py-3 bg-dark" data-bs-theme="dark">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Ціна</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Підтримка</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">О нас</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2024 COBRA Training</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base/base_trainer.html' %}
+
+{% block content %}
+    <main class="p-5 flex-fill d-flex flex-column">
+        <ol>
+        {% for student in list %}
+            <li class="text-light">{{ student.user_id }}</li>
+            <p class="text-primary-emphasis">
+                Дата народження: {{ student.user_id.birth_date|date:'d-m-Y' }}
+            </p>
+            <p class="text-primary-emphasis">
+                Дата створення облікового запису: {{ student.user_id.birth_date|date:'d-m-Y' }}
+            </p>
+        {% endfor %}
+        </ol>
+    </main>
+{% endblock %}

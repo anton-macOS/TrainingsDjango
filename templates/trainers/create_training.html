@@ -1,0 +1,43 @@
+{% extends 'base/base_trainer.html' %}
+
+{% block content %}
+    <main class="p-5 flex-fill d-flex flex-column">
+        <div>
+            <button type="button" class="btn btn-info">+ Додати вправу</button>
+        </div>
+        <div class="text-center">
+            <h3>Створення треніровки</h3>
+        </div>
+        <form>
+            <div class="d-flex mt-3">
+                <label class="d-flex flex-column justify-content-center me-2" style="width: 150px" for="students">Оберіть учня:</label>
+                <select class="form-select w-25" aria-label="Multiple select example" name="students" id="students">
+                    <option selected>Список учнів</option>
+                {% for student in list %}
+                    <option value="{{ student.user_id}}">{{ student.user_id }}</option>
+                {% endfor %}
+                </select>
+                <button type="submit" class="btn btn-success mx-3"> ← Обрати учня</button>
+            </div>
+            <div class="my-3">
+                <div class="d-flex mt-3">
+                    <label class="d-flex flex-column justify-content-center me-2" style="width: 150px" for="exercises">Оберіть вправу:</label>
+                    <select class="form-select w-25 me-3" aria-label="Multiple select example" name="exercises" id="exercises">
+                        <option selected>Список вправ</option>
+                    {% for exercise in exercises %}
+                        <option value="{{ exercise.name }}">{{ exercise.name }}</option>
+                    {% endfor %}
+                    </select>
+                    <label class="d-flex flex-column justify-content-center me-3" style="width: 80px" for="sets">Підходи</label>
+                    <input class="me-3" name="sets" id="sets" style="width: 50px">
+                    <label class="d-flex flex-column justify-content-center me-2" style="width: 100px" for="repeats">Повторення</label>
+                    <input name="repeats" id="repeats" style="width: 50px">
+                </div>
+                <div class="d-flex mt-3 justify-content-center">
+                    <button type="submit" class="btn btn-success mx-3"> Додати до тренування</button>
+                </div>
+            </div>
+        </form>
+        <hr>
+    </main>
+{% endblock %}
